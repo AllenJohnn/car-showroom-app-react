@@ -7,7 +7,7 @@ const NavBar = () => {
       <div className="container-fluid">
         <Link
           className="navbar-brand"
-          to="#"
+          to="/"
           style={{
             display: "flex",
             alignItems: "center",

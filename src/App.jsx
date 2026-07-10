@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddCar from "./components/AddCar";
 import ViewAll from "./components/ViewAll";
 import SearchCar from "./components/SearchCar";
@@ -16,12 +16,14 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<AddCar />} />
+          <Route path="/add" element={<AddCar />} />
+          <Route path="/all" element={<ViewAll />} />
           <Route path="/view-all" element={<ViewAll />} />  
           <Route path="/search" element={<SearchCar />} />
           <Route path="/delete" element={<DeleteCar />} />
-          <Route path="/navbar" element={<NavBar />} />
         </Routes>
       </BrowserRouter>
     </>
